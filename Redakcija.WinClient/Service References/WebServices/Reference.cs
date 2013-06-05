@@ -277,21 +277,21 @@ namespace Redakcija.WinClient.WebServices {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WebServices.TestService")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://zeks.co.uk/redakcija", ConfigurationName="WebServices.TestService")]
     public interface TestService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TestService/PosaljiClanak", ReplyAction="http://tempuri.org/TestService/PosaljiClanakResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://zeks.co.uk/redakcija/TestService/PosaljiClanak", ReplyAction="http://zeks.co.uk/redakcija/TestService/PosaljiClanakResponse")]
         void PosaljiClanak(Redakcija.WinClient.WebServices.Clanak clanak);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/TestService/PosaljiClanak", ReplyAction="http://tempuri.org/TestService/PosaljiClanakResponse")]
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://zeks.co.uk/redakcija/TestService/PosaljiClanak", ReplyAction="http://zeks.co.uk/redakcija/TestService/PosaljiClanakResponse")]
         System.IAsyncResult BeginPosaljiClanak(Redakcija.WinClient.WebServices.Clanak clanak, System.AsyncCallback callback, object asyncState);
         
         void EndPosaljiClanak(System.IAsyncResult result);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TestService/VratiPublikacije", ReplyAction="http://tempuri.org/TestService/VratiPublikacijeResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://zeks.co.uk/redakcija/TestService/VratiPublikacije", ReplyAction="http://zeks.co.uk/redakcija/TestService/VratiPublikacijeResponse")]
         System.Collections.Generic.List<Redakcija.WinClient.WebServices.Publikacija> VratiPublikacije();
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/TestService/VratiPublikacije", ReplyAction="http://tempuri.org/TestService/VratiPublikacijeResponse")]
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://zeks.co.uk/redakcija/TestService/VratiPublikacije", ReplyAction="http://zeks.co.uk/redakcija/TestService/VratiPublikacijeResponse")]
         System.IAsyncResult BeginVratiPublikacije(System.AsyncCallback callback, object asyncState);
         
         System.Collections.Generic.List<Redakcija.WinClient.WebServices.Publikacija> EndVratiPublikacije(System.IAsyncResult result);

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using FluentValidation.Results;
 
 namespace Redakcija.WinClient.Models
 {

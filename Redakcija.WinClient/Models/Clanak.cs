@@ -1,15 +1,23 @@
 ﻿using System;
+using FluentValidation.Results;
+using Redakcija.WinClient.Models.Validators;
 
 namespace Redakcija.WinClient.Models
 {
     public class Clanak : Entity
     {
+        private readonly ClanakValidator m_Validator = new ClanakValidator();
         private int? m_PublikacijaID;
         private int m_KreatorID;
         private int? m_RubrikaID;
         private DateTime m_Datum;
         private string m_Naslov;
         private byte[] m_Raw;
+
+        public Clanak()
+        {
+            Datum = DateTime.Now;
+        }
 
         public int KreatorID
         {
@@ -104,6 +112,11 @@ namespace Redakcija.WinClient.Models
                     RubrikaID = null;
                     break;
             }
+        }
+
+        protected override ValidationResult GetErrors()
+        {
+            return m_Validator.Validate(this);
         }
     }
 }

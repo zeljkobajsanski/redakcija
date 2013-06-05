@@ -12,7 +12,7 @@ using Redakcija.Web.Models;
 
 namespace Redakcija.Web.Services
 {
-    [ServiceContract]
+    [ServiceContract(Namespace = "http://zeks.co.uk/redakcija")]
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class TestService
     {
